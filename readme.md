@@ -15,7 +15,7 @@ Open a command console, enter your project directory and execute the
 following command to add the repo of this bundle:
 
 ```sh
-$ composer config repositories.foo vcs https://github.com/fbruno93/SmartDeleteBundle
+$ composer config repositories.foo vcs https://github.com/fbruno93/sfSmartDeleteBundle
 ```
 
 #### Step 2: Download the Bundle
