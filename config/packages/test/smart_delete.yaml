@@ -1,0 +1,37 @@
+smart_delete:
+
+  # The name of entity manager to use
+  entity_manager:         deleted
+
+  # The repository namespace
+  repository_namespace:   Bfy\SmartDeleteBundle\Tests\Repository
+
+  # Settings for EntityRow
+  entity_row:
+
+    # Folder to create EntityRow
+    dir:                  '%kernel.project_dir%/tests/Entity/Row'
+
+    # Namespace of EntityRow
+    prefix:               Bfy\SmartDeleteBundle\Tests\Entity\Row
+
+  # Settings for EntityDeleted
+  entity_deleted:
+
+    # Folder to create EntityDeleted
+    dir:                  '%kernel.project_dir%/tests/Entity/Deleted'
+
+    # Namespace of EntityDeleted
+    prefix:               Bfy\SmartDeleteBundle\Tests\Entity\Deleted
+
+  # Setting for main Entity
+  entity_main:
+
+    # Folder to create Entity
+    dir:                  '%kernel.project_dir%/tests/Entity/Model'
+
+    # Namespace of Entity
+    prefix:               Bfy\SmartDeleteBundle\Tests\Entity\Model
+
+    # Folder to save original doctrine entity
+    backup:               '%kernel.project_dir%/entity_backup'

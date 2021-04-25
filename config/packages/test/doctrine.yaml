@@ -1,0 +1,34 @@
+doctrine:
+  dbal:
+
+    default_connection: default
+    connections:
+      default:
+        # configure these for your database server
+        url: '%env(resolve:DATABASE_URL)%'
+        driver: 'pdo_sqlite'
+        charset: utf8
+        override_url: true
+      deleted:
+        # configure these for your database server
+        url: '%env(resolve:DELETED_DATABASE_URL)%'
+        driver: 'pdo_sqlite'
+        charset: utf8
+        override_url: true
+  orm:
+    default_entity_manager: default
+    entity_managers:
+      default:
+        connection: default
+        mappings:
+          Main:
+            type: annotation
+            dir: '%kernel.project_dir%/tests/Entity/Model'
+            prefix: 'Bfy\SmartDeleteBundle\Tests\Entity\Model'
+      deleted:
+        connection: deleted
+        mappings:
+          Deleted:
+            type: annotation
+            dir: '%kernel.project_dir%/tests/Entity/Deleted'
+            prefix: 'Bfy\SmartDeleteBundle\Tests\Entity\Deleted'

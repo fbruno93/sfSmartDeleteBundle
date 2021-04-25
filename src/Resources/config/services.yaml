@@ -1,0 +1,20 @@
+services:
+
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  Bfy\SmartDeleteBundle\Command\DeleteCommand:
+    tags:
+      - { name: 'console.command', command: 'bfy:smart-delete' }
+
+  bfy.smart_delete.event_subscriber:
+    class: Bfy\SmartDeleteBundle\EventSubscriber\DatabaseActivitySubscriber
+    tags:
+      - { name: 'doctrine.event_subscriber' }
+
+  Bfy\SmartDeleteBundle\Tests\Repository\ItemRepository:
+    tags:
+      - { name: 'doctrine.repository_service' }
+
+  Symfony\Component\DependencyInjection\ContainerInterface: '@service_container'
