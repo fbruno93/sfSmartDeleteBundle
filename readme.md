@@ -134,4 +134,4 @@ it's this [way](src/Resources/doc/index.md)
 - [x] test : DeletedTrait
 - [x] test : DeleteCommend
 - [x] test : Doctrine Event subscriber
-- [ ] doc : Write the doc
+- [x] doc : Write the doc
